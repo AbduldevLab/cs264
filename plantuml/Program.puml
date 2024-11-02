@@ -1,0 +1,139 @@
+@startuml
+class Program {
+    {static} Main(args:string[]) : void
+    {static} message() : void
+    + {static} MainMenu(canvas:Canvas, originator:Originator, caretaker:Caretaker) : bool
+    + {static} checkShape(input:string, canvas:Canvas, originator:Originator, caretaker:Caretaker) : void
+}
+class Canvas {
+    + Canvas(other:Canvas)
+    + Add(shape:Shape) : void
+    + Canvas()
+    + DisplayCanvas() : void
+    + DisplayCanvas1() : void
+    + clear() : void
+}
+abstract class Shape {
+    + ID : string <<get>> <<set>>
+    + {abstract} ToSVGElement() : string
+}
+class Circle {
+    + X : int <<get>> <<set>>
+    + Y : int <<get>> <<set>>
+    + R : int <<get>> <<set>>
+    + Circle()
+    + Circle(id:string, x:int, y:int, r:int)
+    + <<override>> ToString() : string
+    + <<override>> ToSVGElement() : string
+}
+class Rectangle {
+    + X : int <<get>> <<set>>
+    + Y : int <<get>> <<set>>
+    + W : int <<get>> <<set>>
+    + H : int <<get>> <<set>>
+    + Rectangle()
+    + Rectangle(id:string, x:int, y:int, w:int, h:int)
+    + <<override>> ToString() : string
+    + <<override>> ToSVGElement() : string
+}
+class Ellipse {
+    + X : int <<get>> <<set>>
+    + Y : int <<get>> <<set>>
+    + RX : int <<get>> <<set>>
+    + RY : int <<get>> <<set>>
+    + Ellipse()
+    + Ellipse(id:string, x:int, y:int, rx:int, ry:int)
+    + <<override>> ToString() : string
+    + <<override>> ToSVGElement() : string
+}
+class Line {
+    + X1 : int <<get>> <<set>>
+    + Y1 : int <<get>> <<set>>
+    + X2 : int <<get>> <<set>>
+    + Y2 : int <<get>> <<set>>
+    + Line()
+    + Line(id:string, x1:int, y1:int, x2:int, y2:int)
+    + <<override>> ToString() : string
+    + <<override>> ToSVGElement() : string
+}
+class PolyLine {
+    + P : string <<get>> <<set>>
+    + PolyLine()
+    + PolyLine(id:string, p:string)
+    + <<override>> ToString() : string
+    + <<override>> ToSVGElement() : string
+}
+class Polygon {
+    + PG : string <<get>> <<set>>
+    + Polygon()
+    + Polygon(id:string, pg:string)
+    + <<override>> ToString() : string
+    + <<override>> ToSVGElement() : string
+}
+class Path {
+    + PT : string <<get>> <<set>>
+    + Path()
+    + Path(id:string, pt:string)
+    + <<override>> ToString() : string
+    + <<override>> ToSVGElement() : string
+}
+interface IMemento {
+    + getState() : Canvas
+    + setState(state:Canvas) : void
+}
+class Memento {
+    + Memento(state:Canvas)
+    + getState() : Canvas
+    + setState(state:Canvas) : void
+}
+interface IOriginator {
+    + setState(state:Canvas) : void
+    + getState() : Canvas
+    + createMemento() : Memento
+    + setMemento(Memento:Memento) : void
+}
+class Originator {
+    + setState(state:Canvas) : void
+    + getState() : Canvas
+    + createMemento() : Memento
+    + setMemento(Memento:Memento) : void
+}
+interface ICaretaker {
+    + add(state:Memento) : void
+    + get(index:int) : Memento
+}
+class Caretaker {
+    + add(state:Memento) : void
+    + get(index:int) : Memento
+    + ShowHistory1() : int
+    + ShowHistory() : int
+}
+class "List`1"<T> {
+}
+Program +-- Canvas
+Canvas o-> "canvas<Shape>" "List`1"
+Program +-- Shape
+Program +-- Circle
+Shape <|-- Circle
+Program +-- Rectangle
+Shape <|-- Rectangle
+Program +-- Ellipse
+Shape <|-- Ellipse
+Program +-- Line
+Shape <|-- Line
+Program +-- PolyLine
+Shape <|-- PolyLine
+Program +-- Polygon
+Shape <|-- Polygon
+Program +-- Path
+Shape <|-- Path
+Program +-- IMemento
+Program +-- Memento
+IMemento <|-- Memento
+Program +-- IOriginator
+Program +-- Originator
+IOriginator <|-- Originator
+Program +-- ICaretaker
+Program +-- Caretaker
+ICaretaker <|-- Caretaker
+@enduml

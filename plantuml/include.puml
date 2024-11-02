@@ -1,0 +1,6 @@
+@startuml
+!include ./Program.puml
+!include ./obj/Debug/net5.0/assignment-03-19404086.AssemblyInfo.puml
+!include ./obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.puml
+!include ./obj/Debug/net5.0/assignment-04-19404086.AssemblyInfo.puml
+@enduml

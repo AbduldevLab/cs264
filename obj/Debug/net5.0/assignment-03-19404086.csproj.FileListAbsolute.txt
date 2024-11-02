@@ -1,0 +1,15 @@
+/Users/abdulzino/Documents/assignment-03-19404086/bin/Debug/net5.0/assignment-03-19404086.deps.json
+/Users/abdulzino/Documents/assignment-03-19404086/bin/Debug/net5.0/assignment-03-19404086.runtimeconfig.json
+/Users/abdulzino/Documents/assignment-03-19404086/bin/Debug/net5.0/assignment-03-19404086.runtimeconfig.dev.json
+/Users/abdulzino/Documents/assignment-03-19404086/bin/Debug/net5.0/assignment-03-19404086.dll
+/Users/abdulzino/Documents/assignment-03-19404086/bin/Debug/net5.0/ref/assignment-03-19404086.dll
+/Users/abdulzino/Documents/assignment-03-19404086/bin/Debug/net5.0/assignment-03-19404086.pdb
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.csproj.AssemblyReference.cache
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.AssemblyInfoInputs.cache
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.AssemblyInfo.cs
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.csproj.CoreCompileInputs.cache
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.dll
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/ref/assignment-03-19404086.dll
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.pdb
+/Users/abdulzino/Documents/assignment-03-19404086/obj/Debug/net5.0/assignment-03-19404086.genruntimeconfig.cache
